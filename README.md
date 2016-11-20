@@ -26,8 +26,7 @@ The best part of this totally viable application is: you have to build it!
 ### What you need to do:
 
 1. Fill in the model definitions for `SecretModel` and `CommentModel` in `db/models.js`.
-Both models should really only need a `text` column. Keep in mind that comments should reference a secret and you'll probably have to do this
-using either `belongsTo` or `hasMany`, or both!
+Both models should really only need a `text` column. Keep in mind that comments should reference a secret and you'll probably have to do this using either `belongsTo` or `hasMany`, or both!
 
 2. You should be able to build this application feature-complete with 6 routes:
     

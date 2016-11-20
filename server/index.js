@@ -32,4 +32,3 @@ models.Secret.sync()
         });
     })
     .catch(console.error);
-
