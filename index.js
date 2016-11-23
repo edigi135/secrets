@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 
-const models = require('../db/models');
+const models = require('./db/models');
 
 const app = express();
 
@@ -11,12 +11,12 @@ nunjucks.configure('views', { noCache: true });
 app.set('view engine', 'html');
 app.engine('html', nunjucks.render);
 
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
-app.use('/secrets', require('./secrets-subrouter'));
+app.use('/secrets', require('./server/secrets-subrouter'));
 
 app.get('/', function (req, res) {
     res.redirect('/secrets');
